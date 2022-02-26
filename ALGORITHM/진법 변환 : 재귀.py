@@ -5,6 +5,7 @@ while 1:
     t *= a
     if t * a > n:
         break
+    
 
 def binary(t,n):
     if t == 0:
