@@ -1,0 +1,21 @@
+import sys
+def func(k):
+    if k == 6:
+        for i in range(6):
+            print(arr[i],end=' ')
+        print('\n',end='')
+        return
+    for i in l:
+        if not isused[i] and i > arr[k-1]:
+            arr[k] = i
+            isused[i] = 1
+            func(k+1)
+            isused[i] = 0
+while True:
+    l = list(map(int,sys.stdin.readline().split()))
+    n = l.pop(0)
+    if n == 0: break
+    l.sort()
+    arr = [0 for _ in range(15)]
+    isused = [0 for _ in range(15)]
+    func(0)
